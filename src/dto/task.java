@@ -9,15 +9,15 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-@Entity
+@Table(name = "tasks")
 @NamedQueries({
     @NamedQuery(
         name = "getAlltasks",
         query = "SELECT m FROM task AS m ORDER BY m.id DESC"
         )
 })
+@Entity
 
-@Table(name = "tasks")
 public class task {
     @Id
     @Column(name = "id")
